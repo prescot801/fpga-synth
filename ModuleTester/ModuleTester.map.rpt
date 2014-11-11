@@ -1,0 +1,661 @@
+Analysis & Synthesis report for ModuleTester
+Tue Nov 11 01:22:53 2014
+Quartus II 32-bit Version 11.1 Build 173 11/01/2011 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. State Machine - |ModuleTester|note_pitch2dds:exp2|state
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for note_pitch2dds:exp2|note2dds:note2dds_table|altsyncram:Ram0_rtl_0|altsyncram_ph71:auto_generated
+ 17. Parameter Settings for Inferred Entity Instance: note_pitch2dds:exp2|note2dds:note2dds_table|altsyncram:Ram0_rtl_0
+ 18. Parameter Settings for Inferred Entity Instance: note_pitch2dds:exp2|lpm_mult:Mult0
+ 19. altsyncram Parameter Settings by Entity Instance
+ 20. lpm_mult Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "note_pitch2dds:exp2"
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                   ;
++------------------------------------+-------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Nov 11 01:22:53 2014     ;
+; Quartus II 32-bit Version          ; 11.1 Build 173 11/01/2011 SJ Full Version ;
+; Revision Name                      ; ModuleTester                              ;
+; Top-level Entity Name              ; ModuleTester                              ;
+; Family                             ; Cyclone IV E                              ;
+; Total logic elements               ; 167                                       ;
+;     Total combinational functions  ; 133                                       ;
+;     Dedicated logic registers      ; 102                                       ;
+; Total registers                    ; 102                                       ;
+; Total pins                         ; 42                                        ;
+; Total virtual pins                 ; 0                                         ;
+; Total memory bits                  ; 4,096                                     ;
+; Embedded Multiplier 9-bit elements ; 4                                         ;
+; Total PLLs                         ; 0                                         ;
++------------------------------------+-------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE10E22C8       ;                    ;
+; Top-level entity name                                                      ; ModuleTester       ; ModuleTester       ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                             ;
++------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------+
+; File Name with User-Entered Path               ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                            ;
++------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------+
+; ../modules/note2dds.v                          ; yes             ; User Verilog HDL File                                 ; D:/FPGA_Projects/fpga-synth/modules/note2dds.v                                          ;
+; ../modules/note_pitch2dds.v                    ; yes             ; User Verilog HDL File                                 ; D:/FPGA_Projects/fpga-synth/modules/note_pitch2dds.v                                    ;
+; ModuleTester.v                                 ; yes             ; User Verilog HDL File                                 ; D:/FPGA_Projects/fpga-synth/ModuleTester/ModuleTester.v                                 ;
+; altsyncram.tdf                                 ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/altsyncram.tdf                           ;
+; stratix_ram_block.inc                          ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/stratix_ram_block.inc                    ;
+; lpm_mux.inc                                    ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/lpm_mux.inc                              ;
+; lpm_decode.inc                                 ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/lpm_decode.inc                           ;
+; aglobal111.inc                                 ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/aglobal111.inc                           ;
+; a_rdenreg.inc                                  ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/a_rdenreg.inc                            ;
+; altrom.inc                                     ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/altrom.inc                               ;
+; altram.inc                                     ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/altram.inc                               ;
+; altdpram.inc                                   ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/altdpram.inc                             ;
+; db/altsyncram_ph71.tdf                         ; yes             ; Auto-Generated Megafunction                           ; D:/FPGA_Projects/fpga-synth/ModuleTester/db/altsyncram_ph71.tdf                         ;
+; db/moduletester.rom0_note2dds_a94b2810.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/FPGA_Projects/fpga-synth/ModuleTester/db/moduletester.rom0_note2dds_a94b2810.hdl.mif ;
+; lpm_mult.tdf                                   ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/lpm_mult.tdf                             ;
+; lpm_add_sub.inc                                ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/lpm_add_sub.inc                          ;
+; multcore.inc                                   ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/multcore.inc                             ;
+; bypassff.inc                                   ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/bypassff.inc                             ;
+; altshift.inc                                   ; yes             ; Megafunction                                          ; d:/altera/11.1/quartus/libraries/megafunctions/altshift.inc                             ;
+; db/mult_kbt.tdf                                ; yes             ; Auto-Generated Megafunction                           ; D:/FPGA_Projects/fpga-synth/ModuleTester/db/mult_kbt.tdf                                ;
++------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 167          ;
+;                                             ;              ;
+; Total combinational functions               ; 133          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 21           ;
+;     -- 3 input functions                    ; 64           ;
+;     -- <=2 input functions                  ; 48           ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 55           ;
+;     -- arithmetic mode                      ; 78           ;
+;                                             ;              ;
+; Total registers                             ; 102          ;
+;     -- Dedicated logic registers            ; 102          ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 42           ;
+; Total memory bits                           ; 4096         ;
+; Embedded Multiplier 9-bit elements          ; 4            ;
+; Maximum fan-out node                        ; clk50M~input ;
+; Maximum fan-out                             ; 134          ;
+; Total fan-out                               ; 1070         ;
+; Average fan-out                             ; 3.01         ;
++---------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
+; |ModuleTester                                ; 133 (18)          ; 102 (7)      ; 4096        ; 4            ; 0       ; 2         ; 42   ; 0            ; |ModuleTester                                                                                                  ;              ;
+;    |note_pitch2dds:exp2|                     ; 115 (100)         ; 95 (95)      ; 4096        ; 4            ; 0       ; 2         ; 0    ; 0            ; |ModuleTester|note_pitch2dds:exp2                                                                              ;              ;
+;       |lpm_mult:Mult0|                       ; 15 (0)            ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |ModuleTester|note_pitch2dds:exp2|lpm_mult:Mult0                                                               ;              ;
+;          |mult_kbt:auto_generated|           ; 15 (15)           ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |ModuleTester|note_pitch2dds:exp2|lpm_mult:Mult0|mult_kbt:auto_generated                                       ;              ;
+;       |note2dds:note2dds_table|              ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ModuleTester|note_pitch2dds:exp2|note2dds:note2dds_table                                                      ;              ;
+;          |altsyncram:Ram0_rtl_0|             ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ModuleTester|note_pitch2dds:exp2|note2dds:note2dds_table|altsyncram:Ram0_rtl_0                                ;              ;
+;             |altsyncram_ph71:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ModuleTester|note_pitch2dds:exp2|note2dds:note2dds_table|altsyncram:Ram0_rtl_0|altsyncram_ph71:auto_generated ;              ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                              ;
++-------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------------------------+
+; Name                                                                                                        ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                            ;
++-------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------------------------+
+; note_pitch2dds:exp2|note2dds:note2dds_table|altsyncram:Ram0_rtl_0|altsyncram_ph71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 128          ; 32           ; --           ; --           ; 4096 ; db/ModuleTester.rom0_note2dds_a94b2810.hdl.mif ;
++-------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 2           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 4           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 2           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |ModuleTester|note_pitch2dds:exp2|state                     ;
++------------+------------+------------+------------+------------+------------+
+; Name       ; state.0011 ; state.0010 ; state.0001 ; state.0000 ; state.0100 ;
++------------+------------+------------+------------+------------+------------+
+; state.0000 ; 0          ; 0          ; 0          ; 0          ; 0          ;
+; state.0001 ; 0          ; 0          ; 1          ; 1          ; 0          ;
+; state.0010 ; 0          ; 1          ; 0          ; 1          ; 0          ;
+; state.0011 ; 1          ; 0          ; 0          ; 1          ; 0          ;
+; state.0100 ; 0          ; 0          ; 0          ; 1          ; 1          ;
++------------+------------+------------+------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++----------------------------------------+-----------------------------------------------+
+; Register name                          ; Reason for Removal                            ;
++----------------------------------------+-----------------------------------------------+
+; note_pitch2dds:exp2|ADDER[25..31]      ; Stuck at GND due to stuck port data_in        ;
+; note_pitch2dds:exp2|PITCH_local[8..12] ; Stuck at GND due to stuck port data_in        ;
+; note_pitch2dds:exp2|PITCH_local[0]     ; Merged with note_pitch2dds:exp2|NOTE_local[0] ;
+; note_pitch2dds:exp2|state~2            ; Lost fanout                                   ;
+; note_pitch2dds:exp2|state~3            ; Lost fanout                                   ;
+; note_pitch2dds:exp2|state~5            ; Lost fanout                                   ;
+; Total Number of Removed Registers = 16 ;                                               ;
++----------------------------------------+-----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 102   ;
+; Number of registers using Synchronous Clear  ; 33    ;
+; Number of registers using Synchronous Load   ; 9     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 81    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; note_pitch2dds:exp2|PITCH_local[13]    ; 1       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                             ;
++----------------------------------------------------------+--------------------------------------------------------+------+
+; Register Name                                            ; Megafunction                                           ; Type ;
++----------------------------------------------------------+--------------------------------------------------------+------+
+; note_pitch2dds:exp2|note2dds:note2dds_table|ADDER[0..31] ; note_pitch2dds:exp2|note2dds:note2dds_table|Ram0_rtl_0 ; RAM  ;
++----------------------------------------------------------+--------------------------------------------------------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                     ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------+----------------------------+
+; 4:1                ; 33 bits   ; 66 LEs        ; 33 LEs               ; 33 LEs                 ; |ModuleTester|note_pitch2dds:exp2|ADDER_sum[9] ;                            ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; |ModuleTester|note_pitch2dds:exp2|ADDER_mul[2] ;                            ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; |ModuleTester|note_pitch2dds:exp2|NOTE_n[0]    ;                            ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; |ModuleTester|note_pitch2dds:exp2|state        ;                            ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; |ModuleTester|note_pitch2dds:exp2|state        ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------+----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for note_pitch2dds:exp2|note2dds:note2dds_table|altsyncram:Ram0_rtl_0|altsyncram_ph71:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                        ;
++---------------------------------+--------------------+------+-----------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                         ;
++---------------------------------+--------------------+------+-----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: note_pitch2dds:exp2|note2dds:note2dds_table|altsyncram:Ram0_rtl_0 ;
++------------------------------------+------------------------------------------------+------------------------------+
+; Parameter Name                     ; Value                                          ; Type                         ;
++------------------------------------+------------------------------------------------+------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                              ; Untyped                      ;
+; AUTO_CARRY_CHAINS                  ; ON                                             ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                            ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS                ; ON                                             ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                            ; IGNORE_CASCADE               ;
+; WIDTH_BYTEENA                      ; 1                                              ; Untyped                      ;
+; OPERATION_MODE                     ; ROM                                            ; Untyped                      ;
+; WIDTH_A                            ; 32                                             ; Untyped                      ;
+; WIDTHAD_A                          ; 7                                              ; Untyped                      ;
+; NUMWORDS_A                         ; 128                                            ; Untyped                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                   ; Untyped                      ;
+; ADDRESS_ACLR_A                     ; NONE                                           ; Untyped                      ;
+; OUTDATA_ACLR_A                     ; NONE                                           ; Untyped                      ;
+; WRCONTROL_ACLR_A                   ; NONE                                           ; Untyped                      ;
+; INDATA_ACLR_A                      ; NONE                                           ; Untyped                      ;
+; BYTEENA_ACLR_A                     ; NONE                                           ; Untyped                      ;
+; WIDTH_B                            ; 1                                              ; Untyped                      ;
+; WIDTHAD_B                          ; 1                                              ; Untyped                      ;
+; NUMWORDS_B                         ; 1                                              ; Untyped                      ;
+; INDATA_REG_B                       ; CLOCK1                                         ; Untyped                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                         ; Untyped                      ;
+; RDCONTROL_REG_B                    ; CLOCK1                                         ; Untyped                      ;
+; ADDRESS_REG_B                      ; CLOCK1                                         ; Untyped                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                   ; Untyped                      ;
+; BYTEENA_REG_B                      ; CLOCK1                                         ; Untyped                      ;
+; INDATA_ACLR_B                      ; NONE                                           ; Untyped                      ;
+; WRCONTROL_ACLR_B                   ; NONE                                           ; Untyped                      ;
+; ADDRESS_ACLR_B                     ; NONE                                           ; Untyped                      ;
+; OUTDATA_ACLR_B                     ; NONE                                           ; Untyped                      ;
+; RDCONTROL_ACLR_B                   ; NONE                                           ; Untyped                      ;
+; BYTEENA_ACLR_B                     ; NONE                                           ; Untyped                      ;
+; WIDTH_BYTEENA_A                    ; 1                                              ; Untyped                      ;
+; WIDTH_BYTEENA_B                    ; 1                                              ; Untyped                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                                           ; Untyped                      ;
+; BYTE_SIZE                          ; 8                                              ; Untyped                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                      ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                           ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                           ; Untyped                      ;
+; INIT_FILE                          ; db/ModuleTester.rom0_note2dds_a94b2810.hdl.mif ; Untyped                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                         ; Untyped                      ;
+; MAXIMUM_DEPTH                      ; 0                                              ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                         ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                         ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                         ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                         ; Untyped                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                ; Untyped                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                ; Untyped                      ;
+; ENABLE_ECC                         ; FALSE                                          ; Untyped                      ;
+; WIDTH_ECCSTATUS                    ; 3                                              ; Untyped                      ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                   ; Untyped                      ;
+; CBXI_PARAMETER                     ; altsyncram_ph71                                ; Untyped                      ;
++------------------------------------+------------------------------------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: note_pitch2dds:exp2|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 8            ; Untyped             ;
+; LPM_WIDTHB                                     ; 32           ; Untyped             ;
+; LPM_WIDTHP                                     ; 40           ; Untyped             ;
+; LPM_WIDTHR                                     ; 40           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_kbt     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                              ;
++-------------------------------------------+-------------------------------------------------------------------+
+; Name                                      ; Value                                                             ;
++-------------------------------------------+-------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                 ;
+; Entity Instance                           ; note_pitch2dds:exp2|note2dds:note2dds_table|altsyncram:Ram0_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                                                               ;
+;     -- WIDTH_A                            ; 32                                                                ;
+;     -- NUMWORDS_A                         ; 128                                                               ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                      ;
+;     -- WIDTH_B                            ; 1                                                                 ;
+;     -- NUMWORDS_B                         ; 1                                                                 ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                            ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                      ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                              ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                         ;
++-------------------------------------------+-------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                             ;
++---------------------------------------+------------------------------------+
+; Name                                  ; Value                              ;
++---------------------------------------+------------------------------------+
+; Number of entity instances            ; 1                                  ;
+; Entity Instance                       ; note_pitch2dds:exp2|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 8                                  ;
+;     -- LPM_WIDTHB                     ; 32                                 ;
+;     -- LPM_WIDTHP                     ; 40                                 ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                           ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                 ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                 ;
+;     -- USE_EAB                        ; OFF                                ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                               ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                 ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                 ;
++---------------------------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "note_pitch2dds:exp2"                                                                                                                                                                       ;
++--------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                                                                                                                             ;
++--------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; PITCH        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (14 bits) it drives.  The 18 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; PITCH[13..8] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
++--------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 11.1 Build 173 11/01/2011 SJ Full Version
+    Info: Processing started: Tue Nov 11 01:22:51 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ModuleTester -c ModuleTester
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/lin2exp.v
+    Info (12023): Found entity 1: lin2exp
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/lin2exp_t.v
+    Info (12023): Found entity 1: lin2exp_t
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/opencores/uart/uart_rx.v
+    Info (12023): Found entity 1: uart_rx
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/opencores/uart/baud_gen.v
+    Info (12023): Found entity 1: baud_gen
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/vca8.v
+    Info (12023): Found entity 1: vca8
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/udsdac1.v
+    Info (12023): Found entity 1: udsdac1
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/rnd8.v
+    Info (12023): Found entity 1: rnd8
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/rnd1.v
+    Info (12023): Found entity 1: rnd1
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/reg32.v
+    Info (12023): Found entity 1: reg32
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/reg14w.v
+    Info (12023): Found entity 1: reg14w
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/reg14.v
+    Info (12023): Found entity 1: reg14
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/reg7.v
+    Info (12023): Found entity 1: reg7
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/reg1.v
+    Info (12023): Found entity 1: reg1
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/reg_rs.v
+    Info (12023): Found entity 1: reg_rs
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/pwm8dac1.v
+    Info (12023): Found entity 1: pwm8dac1
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/note2dds.v
+    Info (12023): Found entity 1: note2dds
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/note_pitch2dds.v
+    Info (12023): Found entity 1: note_pitch2dds
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/midi_in.v
+    Info (12023): Found entity 1: midi_in
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/frq1divmod1.v
+    Info (12023): Found entity 1: frq1divmod1
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/fpga4fun_ds8dac1.v
+    Info (12023): Found entity 1: fpga4fun_ds8dac1
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/ds8dac1.v
+    Info (12023): Found entity 1: ds8dac1
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/dds32.v
+    Info (12023): Found entity 1: dds32
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/fpga-synth/modules/adsr32.v
+    Info (12023): Found entity 1: adsr32
+Info (12021): Found 1 design units, including 1 entities, in source file moduletester.v
+    Info (12023): Found entity 1: ModuleTester
+Info (12127): Elaborating entity "ModuleTester" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at ModuleTester.v(25): truncated value with size 32 to match size of target (7)
+Warning (10034): Output port "led1" at ModuleTester.v(6) has no driver
+Info (12128): Elaborating entity "note_pitch2dds" for hierarchy "note_pitch2dds:exp2"
+Warning (10230): Verilog HDL assignment warning at note_pitch2dds.v(51): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at note_pitch2dds.v(76): truncated value with size 33 to match size of target (32)
+Info (12128): Elaborating entity "note2dds" for hierarchy "note_pitch2dds:exp2|note2dds:note2dds_table"
+Info (13005): Duplicate registers merged to single register
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "note_pitch2dds:exp2|note2dds:note2dds_table|Ram0_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 128
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/ModuleTester.rom0_note2dds_a94b2810.hdl.mif
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "note_pitch2dds:exp2|Mult0"
+Info (12130): Elaborated megafunction instantiation "note_pitch2dds:exp2|note2dds:note2dds_table|altsyncram:Ram0_rtl_0"
+Info (12133): Instantiated megafunction "note_pitch2dds:exp2|note2dds:note2dds_table|altsyncram:Ram0_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "128"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/ModuleTester.rom0_note2dds_a94b2810.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ph71.tdf
+    Info (12023): Found entity 1: altsyncram_ph71
+Info (12130): Elaborated megafunction instantiation "note_pitch2dds:exp2|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "note_pitch2dds:exp2|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "8"
+    Info (12134): Parameter "LPM_WIDTHB" = "32"
+    Info (12134): Parameter "LPM_WIDTHP" = "40"
+    Info (12134): Parameter "LPM_WIDTHR" = "40"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_kbt.tdf
+    Info (12023): Found entity 1: mult_kbt
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13014): Ignored 38 buffer(s)
+    Info (13019): Ignored 38 SOFT buffer(s)
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led1" is stuck at GND
+    Warning (13410): Pin "out_data[25]" is stuck at GND
+    Warning (13410): Pin "out_data[26]" is stuck at GND
+    Warning (13410): Pin "out_data[27]" is stuck at GND
+    Warning (13410): Pin "out_data[28]" is stuck at GND
+    Warning (13410): Pin "out_data[29]" is stuck at GND
+    Warning (13410): Pin "out_data[30]" is stuck at GND
+    Warning (13410): Pin "out_data[31]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations. The first 3 are displayed below.
+    Info (17050): Register "note_pitch2dds:exp2|state~2" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "note_pitch2dds:exp2|state~3" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "note_pitch2dds:exp2|state~5" lost all its fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/FPGA_Projects/fpga-synth/ModuleTester/ModuleTester.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+Info (21057): Implemented 252 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 34 output pins
+    Info (21061): Implemented 174 logic cells
+    Info (21064): Implemented 32 RAM segments
+    Info (21062): Implemented 4 DSP elements
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 307 megabytes
+    Info: Processing ended: Tue Nov 11 01:22:53 2014
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/FPGA_Projects/fpga-synth/ModuleTester/ModuleTester.map.smsg.
+
+
