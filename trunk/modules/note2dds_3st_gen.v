@@ -13,7 +13,7 @@ reg [3:0] divider;
 //; Add input / 64 to accumulator
 
 initial begin
-   addr <= 4'd0;
+   addr <= 4'd012;
 	divider <= 4'd0;
 	ADDER_tbl[ 4'd0] <= 32'd0359575;
 	ADDER_tbl[ 4'd1] <= 32'd0380957;
@@ -35,22 +35,33 @@ end
 
 assign ADDER = ADDER_tbl[addr] >> divider;
 
-wire [3:0] diap   = (NOTE <  12) ? 4'd00 :
-					     (NOTE <  24) ? 4'd01 :
-					     (NOTE <  36) ? 4'd02 :
-					     (NOTE <  48) ? 4'd03 :
-					     (NOTE <  60) ? 4'd04 :
-					     (NOTE <  72) ? 4'd05 :
-					     (NOTE <  84) ? 4'd06 :
-					     (NOTE <  96) ? 4'd07 :
-					     (NOTE < 108) ? 4'd08 :
-					     (NOTE < 120) ? 4'd09 : 4'd010 ;
 
-wire [6:0] c_addr = NOTE - (diap * 4'd012); 
-						 
+wire [6:0] note_a = (NOTE <  12) ? NOTE :
+					     (NOTE <  24) ? NOTE - 7'd012 :
+					     (NOTE <  36) ? NOTE - 7'd024 :
+					     (NOTE <  48) ? NOTE - 7'd036 :
+					     (NOTE <  60) ? NOTE - 7'd048 :
+					     (NOTE <  72) ? NOTE - 7'd060 :
+					     (NOTE <  84) ? NOTE - 7'd072 :
+					     (NOTE <  96) ? NOTE - 7'd084 :
+					     (NOTE < 108) ? NOTE - 7'd096 :
+					     (NOTE < 120) ? NOTE - 7'd0108 : NOTE - 7'd0120 ;
+
+wire [3:0] div_val = (NOTE <  12) ? 4'd010 :
+					     (NOTE <  24) ? 4'd09 :
+					     (NOTE <  36) ? 4'd08 :
+					     (NOTE <  48) ? 4'd07 :
+					     (NOTE <  60) ? 4'd06 :
+					     (NOTE <  72) ? 4'd05 :
+					     (NOTE <  84) ? 4'd04 :
+					     (NOTE <  96) ? 4'd03 :
+					     (NOTE < 108) ? 4'd02 :
+					     (NOTE < 120) ? 4'd01 : 4'd00 ;
+
+						  
 always @ (posedge CLK) begin
-	addr    <= c_addr[3:0];
-	divider <= 4'd010 - diap;
+	addr <= note_a[3:0];
+	divider <= div_val;
 end
 
 endmodule
