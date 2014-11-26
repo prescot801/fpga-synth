@@ -1,4 +1,4 @@
-module note_pitch2dds(CLK, NOTE, PITCH, ADDER);
+module note_pitch2dds_2st_gen(CLK, NOTE, PITCH, ADDER);
 
 input wire CLK;
 input wire [6:0] NOTE;
