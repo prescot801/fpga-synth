@@ -1,4 +1,4 @@
-module note2dds(CLK, NOTE, ADDER);
+module note2dds_3st_gen(CLK, NOTE, ADDER);
 
 input wire CLK;
 input wire [6:0] NOTE;
