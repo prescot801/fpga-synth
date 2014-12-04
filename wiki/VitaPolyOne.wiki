@@ -32,6 +32,8 @@ X - NOT implemented
 
 = Audio examples =
 
-[soundcloud url="https://api.soundcloud.com/tracks/173643047" params="auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true" width="100%" height="450" iframe="true" /]
+[https://soundcloud.com/vitasynth/vitasynth-saw-220-hz SAW 220 Hz]
+
+
 = Links =
 <a href="https://sites.google.com/site/analogsynthdiy/sobstvennye-razrabotki/sintezator-na-baze-plis/6-vsti/1-vita-poly">Information about the project on the site (RUS)</a>.
