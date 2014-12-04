@@ -1,6 +1,6 @@
 #summary VCA
 
-<img src="https://code.google.com/p/fpga-synth/source/browse/wiki/vca-f11.gif">
+<img src="https://fpga-synth.googlecode.com/svn/wiki/vca-f11.gif">
 
 While it's easy to simulate the circuit, realisation in practice is less easy. If the opamp used for the low-pass filter doesn't have adequate gain at the switching frequency the filtering will be poor and distortion higher than expected, so it requires extremely fast opamps or passive inductor/ capacitor filters. In addition, the PWM signal requires a fast comparator to get the required variable duty-cycle switching waveform. Even small amounts of amplitude drift in the comparator or oscillator circuits will cause comparatively large level changes. This isn't a problem with a compressor/ limiter, because it will self-correct, but if used as a volume control (for example) any drift will cause the level to change.
 
