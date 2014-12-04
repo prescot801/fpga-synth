@@ -1,8 +1,5 @@
 #summary VitaPolyOne
-
-= VitaPolyOne =
-
-Features:
+= Features =
 
  * One voice
  * Pitch Wheel
