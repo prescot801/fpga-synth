@@ -5,7 +5,7 @@
  * [Single_button Single button]
  * [Switch]
  * [Led]
- * [Single_seven-segment_display Single seven-segment display]
+ * [Seven_segment_display Single 7-segment display]
  * [MIDI_In MIDI In]
  * [1Bit_Audio_out 1Bit Audio out]
 
