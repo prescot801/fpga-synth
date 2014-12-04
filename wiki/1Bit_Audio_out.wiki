@@ -7,3 +7,6 @@ Proteus File - https://code.google.com/p/fpga-synth/source/browse/wiki/1bit_out.
 
 = Simple scheme =
 <img src="https://fpga-synth.googlecode.com/svn/wiki/FPGA_AUDIO_OUTPUT.gif">
+
+= Module =
+For audio output modules use one bit DAC ([https://code.google.com/p/fpga-synth/source/browse/trunk/modules/pwm8dac1.v PWM]). 
