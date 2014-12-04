@@ -2,12 +2,12 @@
 
 = Hardware modules =
 
- * [Single button]
+ * [Single_button Single button]
  * [Switch]
  * [Led]
- * [Single seven-segment display]
- * [MIDI In]
- * [1Bit Audio out]
+ * [Single_seven-segment_display Single seven-segment display]
+ * [MIDI_In MIDI In]
+ * [1Bit_Audio_out 1Bit Audio out]
 
 
 = FPGA modules =
