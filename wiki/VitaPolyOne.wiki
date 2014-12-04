@@ -32,7 +32,12 @@ X - NOT implemented
 
 = Audio examples =
 
-[https://soundcloud.com/vitasynth/vitasynth-saw-220-hz SAW 220 Hz]
+ * [https://soundcloud.com/vitasynth/vitasynth-saw-220-hz SAW 220 Hz]
+ * [https://soundcloud.com/vitasynth/vitasynth-square-wave-440-hz Square 440 Hz]
+ * [https://soundcloud.com/vitasynth/vitasynth-noise-rnd-8bit-stereo Stereo Noise]
+ * [https://soundcloud.com/vitasynth/vitasynth-saw-220-hz-saw-1hz-in-digital-vca SAW 200 Hz and SAW 1 Hz to DCA (Digital VCA)]
+ * [https://soundcloud.com/vitasynth/vitasynth-8-voice-sawsqr-bach Mixer test (poliphonic sound)]
+ * [https://soundcloud.com/vitasynth/tiasu-colour-negative-basspitch-wheel-test Pitch Wheel Test]
 
 
 = Links =
