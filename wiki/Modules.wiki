@@ -8,6 +8,7 @@
  * [Seven_segment_display Single 7-segment display]
  * [MIDI_In MIDI In]
  * [1Bit_Audio_out 1Bit Audio out]
+ * [VCA VCA]
 
 
 = FPGA modules =
