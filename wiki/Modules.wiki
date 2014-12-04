@@ -16,19 +16,19 @@
 == Generators ==
 
 || *Monule Name* || *CLK* || *Function* || *Cells* || *MEM* || *MUL* || *Fmax/Restricted Fmax on C iv* || *Comment* ||
-|| dds32.v || Yes || DDS generator 32 bit in / out  || 44 || - || - || 236.97 МГц / 236.97 МГц||
-|| note2dds.v || Yes || Note (0..127) to dds32 adder converter || 120 || - ||- || 453 МГц / 250 МГц|| Лог схема с памятью (currrent stable)||
-|| note2dds_3st_gen.v || Yes || Преобразование значения ноты 0..127 для входа dds32|| 127 || - ||- || 453 МГц / 250 МГц|| Получилась лог схема с памятью||
-|| note2dds_2st_gen.v || Yes || Преобразование значения ноты 0..127 для входа dds32|| 205 || - ||- || 453 МГц / 238 МГц|| Получилась лог схема с памятью ||
-|| note2dds_1st_gen.v || Yes || Преобразование значения ноты 0..127 для входа dds32|| 44 || 4096 ||- || 449 МГц / 238 МГц|| Получилась память ||
-|| note_pitch2dds.v || Yes || Note (0..127) + pitch (0..8192) to dds32 adder converter || 266|| - ||- || 66 МГц / 66 МГц|| Данные из модуля note2dds.v (currrent)||
-|| note_pitch2dds_2st_gen.v || Yes || Преобразование значения ноты 0..127 + pitch для входа dds32|| 364|| - ||- || 91 МГц / 91 МГц|| задержка в 5 клок (последовательный) ||
-|| note_pitch2dds_1st_gen.v || Yes || Преобразование значения ноты 0..127 + pitch для входа dds32|| 590 || - ||- || 54 МГц / 54 МГц|| задержка в 1 клок, но большой и 54 МГц (на грани) ||
-|| adsr32.v (alpha) || Yes ||  ADSR генератор 32 битные входы и один выход || 167 || - || - || 107.32 МГц / 107.32 МГц ||
-|| lin2exp.v || no ||  Преобразователь значения контрола 0..127 в 32 бита для входа ADSR. Кусочно-линейный.  || 333-429 || - || - || 439.75 МГц / 250 МГц || recommended not to apply ||
-|| lin2exp_t.v || no ||  Преобразователь значения 0..127 в 32 бита для входа ADSR. Табличный (if-elseif).  || 115 || - || - || ? || recommended not to apply ||
-|| rnd1.v || Yes || RND gen 1 bit || 32 || - || - || 728 МГц / 250 МГц ||  ||
-|| rnd8.v || yes || RND gen 8 bit || 250 || - || - || 622 МГц / 250 МГц ||  ||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/dds32.v dds32.v] || Yes || DDS generator 32 bit in / out  || 44 || - || - || 236.97 МГц / 236.97 МГц||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/note2dds.v note2dds.v] || Yes || Note (0..127) to dds32 adder converter || 120 || - ||- || 453 МГц / 250 МГц|| Лог схема с памятью (currrent stable)||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/note2dds_3st_gen.v note2dds_3st_gen.v] || Yes || Преобразование значения ноты 0..127 для входа dds32|| 127 || - ||- || 453 МГц / 250 МГц|| Получилась лог схема с памятью||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/note2dds_2st_gen.v note2dds_2st_gen.v] || Yes || Преобразование значения ноты 0..127 для входа dds32|| 205 || - ||- || 453 МГц / 238 МГц|| Получилась лог схема с памятью ||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/note2dds_1st_gen.v note2dds_1st_gen.v] || Yes || Преобразование значения ноты 0..127 для входа dds32|| 44 || 4096 ||- || 449 МГц / 238 МГц|| Получилась память ||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/note_pitch2dds.v note_pitch2dds.v] || Yes || Note (0..127) + pitch (0..8192) to dds32 adder converter || 266|| - ||- || 66 МГц / 66 МГц|| Данные из модуля note2dds.v (currrent)||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/note_pitch2dds_2st_gen.v note_pitch2dds_2st_gen.v] || Yes || Преобразование значения ноты 0..127 + pitch для входа dds32|| 364|| - ||- || 91 МГц / 91 МГц|| задержка в 5 клок (последовательный) ||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/note_pitch2dds_1st_gen.v note_pitch2dds_1st_gen.v] || Yes || Преобразование значения ноты 0..127 + pitch для входа dds32|| 590 || - ||- || 54 МГц / 54 МГц|| задержка в 1 клок, но большой и 54 МГц (на грани) ||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/adsr32.v adsr32.v] (alpha) || Yes ||  ADSR генератор 32 битные входы и один выход || 167 || - || - || 107.32 МГц / 107.32 МГц ||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/lin2exp.v lin2exp.v] || no ||  Преобразователь значения контрола 0..127 в 32 бита для входа ADSR. Кусочно-линейный.  || 333-429 || - || - || 439.75 МГц / 250 МГц || recommended not to apply ||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/lin2exp_t.v lin2exp_t.v] || no ||  Преобразователь значения 0..127 в 32 бита для входа ADSR. Табличный (if-elseif).  || 115 || - || - || ? || recommended not to apply ||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/rnd1.v rnd1.v] || Yes || RND gen 1 bit || 32 || - || - || 728 МГц / 250 МГц ||  ||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/rnd8.v rnd8.v] || yes || RND gen 8 bit || 250 || - || - || 622 МГц / 250 МГц ||  ||
 
 
 == DAC ==
