@@ -1,10 +1,11 @@
 #summary VitaPolyOne
 = Features =
 
+ * Controlled by MIDI commands
  * One voice
  * Pitch Wheel
- * MIDI contolled ADSR
- * Analog VCA
+ * ADSR
+ * Digital OR Analog VCA
 
 = MIDI Implementation Chart =
 
