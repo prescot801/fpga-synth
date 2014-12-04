@@ -32,6 +32,6 @@ X - NOT implemented
 
 = Audio examples =
 
-<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/173643047&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+[soundcloud url="https://api.soundcloud.com/tracks/173643047" params="auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true" width="100%" height="450" iframe="true" /]
 = Links =
 <a href="https://sites.google.com/site/analogsynthdiy/sobstvennye-razrabotki/sintezator-na-baze-plis/6-vsti/1-vita-poly">Information about the project on the site (RUS)</a>.
