@@ -1,11 +1,9 @@
 #summary 1Bit_Audio_out
 
 = Tested scheme with high sound quality =
-
-<img src="https://sites.google.com/site/analogsynthdiy/_/rsrc/1413485384663/sobstvennye-razrabotki/sintezator-na-baze-plis/11---vvod-vyvod/1---vyvod-1-bitnogo-zvuka/1bit_out.png">
+<img src="https://fpga-synth.googlecode.com/svn/wiki/1bit_out.png">
 
 Proteus File - https://code.google.com/p/fpga-synth/source/browse/wiki/1bit_out.DSN
 
 = Simple scheme =
-
-<img src="https://sites.google.com/site/analogsynthdiy/_/rsrc/1410427354825/sobstvennye-razrabotki/sintezator-na-baze-plis/11---vvod-vyvod/1---vyvod-1-bitnogo-zvuka/FPGA_AUDIO_OUTPUT.gif">
+<img src="https://fpga-synth.googlecode.com/svn/wiki/FPGA_AUDIO_OUTPUT.gif">
