@@ -34,8 +34,8 @@
 == DAC ==
 
 || *Monule Name* || *CLK* || *Function* || *Cells* || *MEM* || *MUL* || *Fmax/Restricted Fmax on C iv* || *Comment* ||
-|| pwm8dac1.v || Yes ||  8 -> 1 PWM D/A converter Fdiscr = CLK/256 || 17|| - || - || 194 МГц / 194 МГц || recommended for use ||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/ds8dac1.v pwm8dac1.v] || Yes ||  8 -> 1 PWM D/A converter Fdiscr = CLK/256 || 17|| - || - || 194 МГц / 194 МГц || recommended for use ||
 
 == MIDI_IN ==
 || *Monule Name* || *CLK* || *Function* || *Cells* || *MEM* || *MUL* || *Fmax/Restricted Fmax on C iv* || *Comment* ||
-|| midi_in.v || Yes || MIDI message decoder || ? || ? || ? || ? МГц / ? МГц ||  ||
+|| [https://code.google.com/p/fpga-synth/source/browse/trunk/modules/midi_in.v midi_in.v] || Yes || MIDI message decoder || ? || ? || ? || ? МГц / ? МГц ||  ||
