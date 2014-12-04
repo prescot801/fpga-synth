@@ -1,6 +1,16 @@
 #summary List of modules
 
-= List of modules =
+= Hardware modules =
+
+ * [A single button]
+ * [Switch]
+ * [Led]
+ * [Seven-segment display]
+ * [MIDI In]
+ * [1Bit Audio out]
+
+
+= FPGA modules =
 
 == Generators ==
 
