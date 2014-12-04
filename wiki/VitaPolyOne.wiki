@@ -2,7 +2,7 @@
 = Features =
 
  * Controlled by MIDI commands
- * One voice
+ * One voice (Waveform - Saw)
  * Pitch Wheel
  * ADSR
  * Digital OR Analog VCA
