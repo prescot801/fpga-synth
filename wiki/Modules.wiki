@@ -2,10 +2,10 @@
 
 = Hardware modules =
 
- * [A single button]
+ * [Single button]
  * [Switch]
  * [Led]
- * [Seven-segment display]
+ * [Single seven-segment display]
  * [MIDI In]
  * [1Bit Audio out]
 
