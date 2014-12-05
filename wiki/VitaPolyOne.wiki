@@ -1,4 +1,8 @@
 #summary VitaPolyOne
+
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VCJ8CKENCCFSG"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"></a>
+
+
 = Features =
 
  * Controlled by MIDI commands
