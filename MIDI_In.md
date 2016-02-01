@@ -1,0 +1,7 @@
+Matching MIDI input line with the FPGA. Tested and working, this scheme. FPGA Altera Cyclone 4 (3.3 V)
+
+<img src='https://sites.google.com/site/analogsynthdiy/_/rsrc/1413481726712/sobstvennye-razrabotki/sintezator-na-baze-plis/11---vvod-vyvod/2-midi-vhod/FPGA_MIDI_IN.gif'>
+
+Module:<br>
+<br>
+<a href='https://code.google.com/p/fpga-synth/source/browse/trunk/modules/midi_in.v'>https://code.google.com/p/fpga-synth/source/browse/trunk/modules/midi_in.v</a>

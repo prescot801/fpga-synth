@@ -1,0 +1,5 @@
+# ModuleTester #
+
+Test project in the Quartus 11 in which I insert the test module, load it and compile inputs to determine its size in cells, memory, multipliers, as well as the maximum frequency.
+
+The results are collected in the table on page [Modules](Modules.md)

@@ -1,0 +1,10 @@
+<img src='https://fpga-synth.googlecode.com/svn/wiki/vca-f11.gif'>
+
+While it's easy to simulate the circuit, realisation in practice is less easy. If the opamp used for the low-pass filter doesn't have adequate gain at the switching frequency the filtering will be poor and distortion higher than expected, so it requires extremely fast opamps or passive inductor/ capacitor filters. In addition, the PWM signal requires a fast comparator to get the required variable duty-cycle switching waveform. Even small amounts of amplitude drift in the comparator or oscillator circuits will cause comparatively large level changes. This isn't a problem with a compressor/ limiter, because it will self-correct, but if used as a volume control (for example) any drift will cause the level to change.<br>
+<br>
+Needless to say, a fully digital pulse generator will solve this problem neatly, but requires either a fast microcontroller (at least 10MHz for 0.5% duty cycle resolution at 50kHz output) or a fairly large number of discrete logic ICs. It is unlikely that any digital pulse generator will be fast enough for a peak limiter, especially if an attack time of less than a few milliseconds is desired.<br>
+<br>
+PWM has only been used by a small number of manufacturers, and I've been unable to find out why it's not more popular. While there are some very obvious reasons (circuit complexity compared to a plug-and-play VCA chip for example), it is a technique that has some appeal because of the almost complete freedom from distortion - other than that created by the CMOS switch. From looking over datasheets, some of the better dedicated VCA ICs are likely to have lower distortion than a CMOS switch, and are both cheaper and a great deal less complex overall. I think I just answered my own question<br>
+<br>
+<h1>Links</h1>
+<a href='http://sound.westhost.com/articles/vca-techniques.html'>http://sound.westhost.com/articles/vca-techniques.html</a>
